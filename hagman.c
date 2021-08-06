@@ -4,9 +4,9 @@
 #include "printFileList.h"
 #include "sleep.h"
 #include "len.h"
-//#include "selectRandomLine.h"
-//#include "len.h"
-//#include "compareIndexCharacterString.h"
+#include "firstFunction.h"
+#include "compareIndexCharacterString.h"
+#include "encodeCountry.h"
 
 enum Mode{
         easy = 1,
