@@ -17,7 +17,7 @@ char* countryEncoder(char* pais, int*addressVariable){
     }
 
     letter = rand()%len;
-    int hide = ran()%len;
+    int hide = rand()%len;
     for(int i = 0; i < letter; i++){
         int hide = rand()%len;
         encoded[hide] = country[hide];
