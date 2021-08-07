@@ -1,14 +1,11 @@
+#include <time.h>  
 #include <stdlib.h>
 #include <string.h>
 
-char* country = "Mexico";
-int letter;
-int point = 0;
-
-char* countryEncoder(char* pais, int*addressVariable){
+char* encodeCountry(char* pais, int*addressVariable){
 
     srand(time(NULL));
-    int len = lenght(country);
+    int len = strlen(pais);
     
     char* encoded = (char*) malloc(sizeof(char)*len);
 
@@ -16,16 +13,12 @@ char* countryEncoder(char* pais, int*addressVariable){
         encoded[i] = '*';
     }
 
-    letter = rand()%len;
-    int hide = rand()%len;
-    for(int i = 0; i < letter; i++){
-        int hide = rand()%len;
-        encoded[hide] = country[hide];
-    }
-    int*point = &letter;
-    variableM(&letter);
-
-    // printf("Country Name: %s\n", EncodedCountry);
-    printf("Current Points:%d\n", letter);
-}
     
+    int hide = rand()%len;
+    
+    for(int i = 0; i < hide; i++){
+        int hide = rand()%len;
+        encoded[hide] = pais[hide];
+    }
+    return encoded;
+}
